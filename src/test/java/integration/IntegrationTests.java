@@ -21,5 +21,4 @@ public class IntegrationTests {
         expect(shape.calcSquare()).andReturn(anyDouble()).once();
     }
 	//comment for triggering build
-    //comment for triggering build
 }
