@@ -34,4 +34,13 @@ public class FunctionalTests {
         new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.rc")));
         Assert.assertTrue(driver.findElements(By.cssSelector("div.rc")).size() > 0);
     }
+
+    @Test
+    public void googleTest1() {
+        driver.findElement(By.id("lst-ib")).sendKeys("rectangle");
+        new Actions(driver).sendKeys(Keys.ENTER).build().perform();
+
+        new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.rc")));
+        Assert.assertTrue(driver.findElements(By.cssSelector("div.rc")).size() > 0);
+    }
 }
